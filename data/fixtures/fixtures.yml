@@ -15,3 +15,104 @@
 #     password: changeme
 #     name:     Kris Wallsmith
 #     email:    kris.wallsmith@symfony-project.com
+sfGuardGroup:
+  sfGuardGroup_1:
+    name: Soporte
+    description: 'Grupo de Soporte de GDLIcanet'
+  sfGuardGroup_2:
+    name: Ventas
+    description: 'Grupo de ventas de GDLIcanet'
+sfGuardPermission:
+  sfGuardPermission_1:
+    name: soporte
+    description: 'Grupo de Soporte de GDLIcanet'
+  sfGuardPermission_2:
+    name: ventas
+    description: 'Permiso de ventas de GDLIcanet'
+sfGuardGroupPermission:
+  sfGuardGroupPermission_1_1:
+    group_id: sfGuardGroup_1
+    permission_id: sfGuardPermission_1
+  sfGuardGroupPermission_2_2:
+    group_id: sfGuardGroup_2
+    permission_id: sfGuardPermission_2
+sfGuardUser:
+  sfGuardUser_1:
+    username: abraham
+    algorithm: sha1
+    salt: e7ea5f7b77b89e355c48bc0deb389200
+    password: 475a136d1ff46bfcde8de0901acc7f44549f12bb
+    created_at: '2013-04-22 11:05:18'
+    last_login: '2013-04-22 11:38:04'
+    is_active: '1'
+    is_super_admin: '1'
+  sfGuardUser_2:
+    username: otto
+    algorithm: sha1
+    salt: 8f0ccc74f20f3283ef321ca44ee047eb
+    password: 67459d03fd69b73f4da34de8e0bf20de5ba0d062
+    created_at: '2013-04-22 12:00:59'
+    last_login: '2013-04-22 12:03:43'
+    is_active: '1'
+    is_super_admin: '0'
+  sfGuardUser_3:
+    username: eguzman
+    algorithm: sha1
+    salt: fd0c57696eb14fefe0afe4faed623235
+    password: b26d894567ea624a22f4e80ff32245787092fc3f
+    created_at: '2013-04-22 12:01:29'
+    is_active: '1'
+    is_super_admin: '0'
+  sfGuardUser_4:
+    username: adrian
+    algorithm: sha1
+    salt: 12e5654a94f5f5f4ec3df48a022ac290
+    password: a2d24a41a2d59640738d98ba691f2d61d447e71d
+    created_at: '2013-04-22 12:01:56'
+    is_active: '1'
+    is_super_admin: '0'
+sfGuardUserGroup:
+  sfGuardUserGroup_2_1:
+    user_id: sfGuardUser_2
+    group_id: sfGuardGroup_1
+  sfGuardUserGroup_3_1:
+    user_id: sfGuardUser_3
+    group_id: sfGuardGroup_1
+  sfGuardUserGroup_4_2:
+    user_id: sfGuardUser_4
+    group_id: sfGuardGroup_2
+sfGuardUserPermission:
+  sfGuardUserPermission_2_1:
+    user_id: sfGuardUser_2
+    permission_id: sfGuardPermission_1
+  sfGuardUserPermission_3_1:
+    user_id: sfGuardUser_3
+    permission_id: sfGuardPermission_1
+  sfGuardUserPermission_4_2:
+    user_id: sfGuardUser_4
+    permission_id: sfGuardPermission_2
+icabox:
+  icabox_1:
+    nombre_icabox: 'Hola Mundo'
+    fecha_armado: '1974-02-02'
+    procesador: AMD
+    tarjeta_madre: Gigabyte
+    memoria_ram: '2 GB'
+    disco_duro: '640'
+    lugar_destino: Mexico
+    fecha_retiro: '1914-01-02'
+  icabox_2:
+    nombre_icabox: 'Hola Mundo II'
+    fecha_armado: '1975-01-01'
+    procesador: AMD
+    tarjeta_madre: Gigabyte
+    memoria_ram: '2 GB'
+    disco_duro: '640'
+    lugar_destino: Mexico
+    fecha_retiro: '1913-01-01'
+ReparacionIcabox:
+  ReparacionIcabox_1:
+    id_icabox: icabox_1
+    fecha_fallo: '2009-01-01'
+    motivo_fallo: A
+    solucion: A
