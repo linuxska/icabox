@@ -1,0 +1,24 @@
+propel:
+  _attributes:
+    package: lib.model
+    defaultIdMethod: native
+  icabox:
+    _attributes: { phpName: icabox }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    nombre_icabox: { phpName: NombreIcabox, type: VARCHAR, size: '45', required: true }
+    fecha_armado: { phpName: FechaArmado, type: DATE, required: true }
+    procesador: { phpName: Procesador, type: VARCHAR, size: '32', required: true }
+    tarjeta_madre: { phpName: TarjetaMadre, type: VARCHAR, size: '45', required: true }
+    memoria_ram: { phpName: MemoriaRam, type: VARCHAR, size: '32', required: true }
+    disco_duro: { phpName: DiscoDuro, type: VARCHAR, size: '32', required: true }
+    lugar_destino: { phpName: LugarDestino, type: VARCHAR, size: '64', required: true }
+    fecha_retiro: { phpName: FechaRetiro, type: DATE, required: false }
+  reparacion_icabox:
+    _attributes: { phpName: ReparacionIcabox }
+    id: { phpName: Id, type: INTEGER, size: '11', primaryKey: true, autoIncrement: true, required: true }
+    id_icabox: { phpName: IdIcabox, type: INTEGER, size: '11', required: true, foreignTable: icabox, foreignReference: id, onDelete: RESTRICT, onUpdate: RESTRICT }
+    fecha_fallo: { phpName: FechaFallo, type: DATE, required: true }
+    motivo_fallo: { phpName: MotivoFallo, type: LONGVARCHAR, required: true }
+    solucion: { phpName: Solucion, type: LONGVARCHAR, required: false }
+    fecha_produccion: { phpName: FechaProduccion, type: DATE, required: false }
+    _indexes: { id: [id_icabox] }
