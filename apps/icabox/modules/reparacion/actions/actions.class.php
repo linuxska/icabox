@@ -12,6 +12,7 @@ class reparacionActions extends sfActions
   public function executeIndex(sfWebRequest $request)
   {
     $this->ReparacionIcaboxs = ReparacionIcaboxPeer::doSelect(new Criteria());
+
   }
 
   public function executeNew(sfWebRequest $request)
@@ -70,7 +71,7 @@ class reparacionActions extends sfActions
     {
       $ReparacionIcabox = $form->save();
 
-      $this->redirect('reparacion/edit?id='.$ReparacionIcabox->getId());
+      $this->redirect('reparacion/index');
     }
   }
 }

@@ -10,11 +10,13 @@
       <tr>
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
-          &nbsp;<a class="btn btn-secundary" href="<?php echo url_for('reparacion/index') ?>">Back to list</a>
+          &nbsp;<a class="btn btn-secundary" href="<?php echo url_for('reparacion/index') ?>">Regresar a la lista</a>
+         <!--
          <span class="btn btn-secundary"> <?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php echo link_to('Borrar', 'reparacion/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Estas seguro?')) ?>
           <?php endif; ?>
           </span>
+          -->
           <input  class="btn btn-primary" type="submit" value="Guardar" />
         </td>
       </tr>
@@ -50,10 +52,10 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['fecha_produccion']->renderLabel() ?></th>
+        <th><?php echo $form['fecha_salida']->renderLabel() ?></th>
         <td>
-          <?php echo $form['fecha_produccion']->renderError() ?>
-          <?php echo $form['fecha_produccion'] ?>
+          <?php echo $form['fecha_salida']->renderError() ?>
+          <?php echo $form['fecha_salida'] ?>
         </td>
       </tr>
     </tbody>

@@ -4,13 +4,13 @@ html, body{
     background-color:white !important;
 }
 div#header{
-    text-align:center;
-    height:200px;
+    text-align:left;
+    height:100px;
     background-color:white;
 }
 div#header img{
-    width:1000px;
-    height:200px;
+    width:500px;
+    height:100px;
 }
 div#content{
     min-height:500px;

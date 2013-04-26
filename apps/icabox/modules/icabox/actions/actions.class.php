@@ -70,7 +70,59 @@ class icaboxActions extends sfActions
     {
       $Icabox = $form->save();
 
-      $this->redirect('icabox/edit?id='.$Icabox->getId());
+      $this->redirect('icabox/index');
     }
+  }
+   public function executeFilter(sfWebRequest $request)
+  {
+    $this->setPage(1);
+
+    if ($request->hasParameter('_reset'))
+    {
+      $this->setFilters($this->configuration->getFilterDefaults());
+
+      $this->redirect('@icabox');
+    }
+
+    $this->filters = $this->configuration->getFilterForm($this->getFilters());
+
+    $this->filters->bind($request->getParameter($this->filters->getName()));
+    if ($this->filters->isValid())
+    {
+      $this->setFilters($this->filters->getValues());
+
+      $this->redirect('@icabox');
+    }
+
+    $this->pager = $this->getPager();
+    $this->sort = $this->getSort();
+
+    $this->setTemplate('index');
+  }
+  protected function getFilters()
+  {
+    return $this->getUser()->getAttribute('icabox.filters', $this->configuration->getFilterDefaults(), 'admin_module');
+  }
+
+  protected function setFilters(array $filters)
+  {
+    return $this->getUser()->setAttribute('icabox.filters', $filters, 'admin_module');
+  }
+
+protected function buildCriteria()
+  {
+    if (null === $this->filters)
+    {
+      $this->filters = $this->configuration->getFilterForm($this->getFilters());
+    }
+
+    $criteria = $this->filters->buildCriteria($this->getFilters());
+
+    $this->addSortCriteria($criteria);
+
+    $event = $this->dispatcher->filter(new sfEvent($this, 'admin.build_criteria'), $criteria);
+    $criteria = $event->getReturnValue();
+
+    return $criteria;
   }
 }

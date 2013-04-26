@@ -9,18 +9,19 @@
       <th>Nombre de la icabox</th>
       <th>Fecha fallo</th>
       <th>Motivo fallo</th>
-      <th>Solucion</th>
-      <th>Fecha produccion</th>
+      <th>Solución</th>
+      <th>Fecha Salida</th>
     </tr>
   </thead>
   <tbody>
     <?php foreach ($ReparacionIcaboxs as $ReparacionIcabox): ?>
+    <?php $Icabox = IcaboxPeer::retrieveByPk($ReparacionIcabox->getIdIcabox());?>
     <tr>
-      <td><a href="<?php echo url_for('reparacion/edit?id='.$ReparacionIcabox->getId()) ?>"><?php echo $ReparacionIcabox->getIdIcabox() ?></td>
+      <td><a href="<?php echo url_for('reparacion/edit?id='.$ReparacionIcabox->getId()) ?>"><?php echo $Icabox->getNumeroSerie() ?></td>
       <td><?php echo $ReparacionIcabox->getFechaFallo() ?></td>
       <td><?php echo $ReparacionIcabox->getMotivoFallo() ?></td>
       <td><?php echo $ReparacionIcabox->getSolucion() ?></td>
-      <td><?php echo $ReparacionIcabox->getFechaProduccion() ?></td>
+      <td><?php echo $ReparacionIcabox->getFechaSalida() ?></td>
     </tr>
     <?php endforeach; ?>
   </tbody>

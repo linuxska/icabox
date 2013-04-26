@@ -11,9 +11,12 @@
         <td colspan="2">
           <?php echo $form->renderHiddenFields(false) ?>
           &nbsp;<a class="btn btn-secundary" href="<?php echo url_for('icabox/index') ?>">Regresar a la lista</a>
+          <!--
+            Accion de eliminar
           <span class="btn btn-secundary"><?php if (!$form->getObject()->isNew()): ?>
             &nbsp;<?php  echo link_to('Borrar', 'icabox/delete?id='.$form->getObject()->getId(), array('method' => 'delete', 'confirm' => 'Seguro que deseas borrar la icabox?')) ?>
           <?php endif; ?>
+          -->
           </span>
           <input class="btn btn-primary" type="submit" value="Guardar" />
         </td>
@@ -21,20 +24,6 @@
     </tfoot>
     <tbody>
       <?php echo $form->renderGlobalErrors() ?>
-      <tr>
-        <th><?php echo $form['nombre_icabox']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['nombre_icabox']->renderError() ?>
-          <?php echo $form['nombre_icabox'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['fecha_armado']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['fecha_armado']->renderError() ?>
-          <?php echo $form['fecha_armado'] ?>
-        </td>
-      </tr>
       <tr>
         <th><?php echo $form['procesador']->renderLabel() ?></th>
         <td>
@@ -57,17 +46,10 @@
         </td>
       </tr>
       <tr>
-        <th><?php echo $form['disco_duro']->renderLabel() ?></th>
+        <th><?php echo $form['hostname']->renderLabel() ?></th>
         <td>
-          <?php echo $form['disco_duro']->renderError() ?>
-          <?php echo $form['disco_duro'] ?>
-        </td>
-      </tr>
-      <tr>
-        <th><?php echo $form['lugar_destino']->renderLabel() ?></th>
-        <td>
-          <?php echo $form['lugar_destino']->renderError() ?>
-          <?php echo $form['lugar_destino'] ?>
+          <?php echo $form['hostname']->renderError() ?>
+          <?php echo $form['hostname'] ?>
         </td>
       </tr>
       <tr>

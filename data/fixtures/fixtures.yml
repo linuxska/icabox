@@ -93,26 +93,24 @@ sfGuardUserPermission:
     permission_id: sfGuardPermission_2
 icabox:
   icabox_1:
-    nombre_icabox: 'Hola Mundo'
+    numero_serie: 'Hola Mundo'
     fecha_armado: '1974-02-02'
     procesador: AMD
     tarjeta_madre: Gigabyte
     memoria_ram: '2 GB'
-    disco_duro: '640'
-    lugar_destino: Mexico
+    hostname: www.
     fecha_retiro: '1914-01-02'
   icabox_2:
-    nombre_icabox: 'Hola Mundo II'
+    numero_serie: 'Hola Mundo II'
     fecha_armado: '1975-01-01'
     procesador: AMD
     tarjeta_madre: Gigabyte
     memoria_ram: '2 GB'
-    disco_duro: '640'
-    lugar_destino: Mexico
+    hostname: www.
     fecha_retiro: '1913-01-01'
 ReparacionIcabox:
   ReparacionIcabox_1:
     id_icabox: icabox_1
     fecha_fallo: '2009-01-01'
     motivo_fallo: A
-    solucion: A
+    otto: A

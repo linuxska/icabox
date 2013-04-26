@@ -20,7 +20,7 @@ class Icabox extends BaseIcabox {
 
 	public function __toString() {
 
-		return $this->getNombreIcabox();
+		return $this->getNumeroSerie();
 	}
 
 } // Icabox
