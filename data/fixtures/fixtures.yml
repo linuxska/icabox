@@ -91,26 +91,3 @@ sfGuardUserPermission:
   sfGuardUserPermission_4_2:
     user_id: sfGuardUser_4
     permission_id: sfGuardPermission_2
-icabox:
-  icabox_1:
-    numero_serie: 'Hola Mundo'
-    fecha_armado: '1974-02-02'
-    procesador: AMD
-    tarjeta_madre: Gigabyte
-    memoria_ram: '2 GB'
-    hostname: www.
-    fecha_retiro: '1914-01-02'
-  icabox_2:
-    numero_serie: 'Hola Mundo II'
-    fecha_armado: '1975-01-01'
-    procesador: AMD
-    tarjeta_madre: Gigabyte
-    memoria_ram: '2 GB'
-    hostname: www.
-    fecha_retiro: '1913-01-01'
-ReparacionIcabox:
-  ReparacionIcabox_1:
-    id_icabox: icabox_1
-    fecha_fallo: '2009-01-01'
-    motivo_fallo: A
-    otto: A
