@@ -9,6 +9,8 @@
     </div>
     <?php endif; ?>
     <dl>
+        <dt>Icabox.</dt>
+        <dd>Cada Icabox tiene un numero de serie que se encuentra dentro de /etc/serial </dd>
        <dt>Manual de usuario.</dt>
         <dd>En el siguiente enlace puede descargar el manual de usuario. En el podrá
             consultar el funcionamiento del sistema.</dd>
