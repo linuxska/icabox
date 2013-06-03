@@ -10,7 +10,7 @@
 class IcaboxForm extends BaseIcaboxForm
 {
 
-  protected $procesador = array('A_MD' => 'A_MD','Intel' => 'Intel', 'Desconocido' => 'Desconocido','Otro' => 'Otro');
+  protected $procesador = array('AMD' => 'AMD','Intel' => 'Intel', 'Desconocido' => 'Desconocido','Otro' => 'Otro');
   protected $tarjeta_madre = array('Gigabyte' => 'Gigabyte', 'Asus' => 'Asus', 'Foxconn' => 'Foxconn', 'PC chips'=>'PC chips', 'AsRock'=>'AsRock', 'Desconocido' => 'Desconocido', 'Otro' => 'Otro(a)');
   protected $memoria_ram = array('512MB' => '512MB','1GB' => '1GB', '2GB' => '2GB','4GB' => '4GB','8GB' => '8GB');
 
